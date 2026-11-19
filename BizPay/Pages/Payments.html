@@ -86,10 +86,10 @@ even in small screens. -->
             dliber@corporate.edu
             </span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link is-active" href="../index.html"><i class="material-icons nav-icon" role="presentation">home</i>Home</a>
-                <a class="mdl-navigation__link" href="Payments.html"><i class="material-icons nav-icon" role="presentation">payment</i>Payments</a>
+                <a class="mdl-navigation__link" href="../index.html"><i class="material-icons nav-icon" role="presentation">home</i>Home</a>
+                <a class="mdl-navigation__link is-active" href="Payments.html"><i class="material-icons nav-icon" role="presentation">payment</i>Payments</a>
                 <a class="mdl-navigation__link" href="Payroll.html"><i class="material-icons nav-icon" role="presentation">people</i>Pay-Roll</a>
-                <a class="mdl-navigation__link" href="Pages/History.html"><i class="material-icons nav-icon" role="presentation">help</i>Help</a>
+                <a class="mdl-navigation__link" href="#help" data-open-help="true"><i class="material-icons nav-icon" role="presentation">help</i>Help</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
@@ -107,8 +107,6 @@ even in small screens. -->
                                 <th class="mdl-data-table__cell--non-numeric p-header">Payment Status</th>
                                 <th class="mdl-data-table__cell--non-numeric q-header">Quantity</th>
                                 <th class="mdl-data-table__cell--non-numeric final-row">Date</th>
-
-                            </tr>
                             </tr>
                         </thead>
                         <tbody>
@@ -136,14 +134,14 @@ even in small screens. -->
                                 <td class="mdl-data-table__cell--non-numeric"><a class="unpaid">Unpaid</a></td>
                                 <td class="quantity">$74.00</td>
                                 <td>10/14/16</td>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric View-More-Text"></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><button class="mdl-button mdl-js-button mdl-button--primary secondary-button">
-                                    View More
-                                </button></td>
-                                </tr>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric View-More-Text"></td>
+                                <td></td>
+                                <td></td>
+                                <td><button class="mdl-button mdl-js-button mdl-button--primary secondary-button">
+                                View More
+                            </button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -152,63 +150,60 @@ even in small screens. -->
             <br>
 
             <div class="page-content last-table">
-                <main class="mdl-layout__content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 Home-title">
-                                Online
-                            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 Home-title">
+                            Online
                         </div>
-                        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp payments-table">
-                            <thead>
-                                <tr>
-                                    <th class="mdl-data-table__cell--non-numeric">Name</th>
-                                    <th class="mdl-data-table__cell--non-numeric p-header">Payment Status</th>
-                                    <th class="mdl-data-table__cell--non-numeri q-header">Quantity</th>
-                                    <th class="mdl-data-table__cell--non-numeric final-row">Date</th>
-
-                                </tr>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"> <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=faces" alt="" class=" img-circle sample-profile" height="48px" width="48px" />Juan Colon</td>
-                                    <td class="mdl-data-table__cell--non-numeric"><a class="paid">Paid</a></td>
-                                    <td class="quantity">$64.09</td>
-                                    <td>05/14/16</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"> <img src="https://i.vimeocdn.com/portrait/8871703_300x300" alt="" class=" img-circle sample-profile" height="48px" width="48px" />Paul Rivera</td>
-                                    <td class="mdl-data-table__cell--non-numeric"><a class="paid">Paid</a></td>
-                                    <td class="quantity">$73.80</td>
-                                    <td>07/14/16</td>
-                                </tr>
-                                <tr>
-                                    <td class="mdl-data-table__cell--non-numeric"> <img src="https://lh3.googleusercontent.com/-aQgPcf5qADM/AAAAAAAAAAI/AAAAAAAAAAA/gyCKEZb6dFw/photo.jpg" alt="" class=" img-circle sample-profile" height="48px" width="48px" />Patricia Santiago</td>
-                                    <td class="mdl-data-table__cell--non-numeric"><a class="unpaid">Unpaid</a></td>
-                                    <td class="quantity">$58.90</td>
-                                    <td>09/10/16</td>
-                                </tr>
-                                <tr>
-
-                                    <td class="mdl-data-table__cell--non-numeric"> <img src="https://www.gatescambridge.org/sites/www.gatescambridge.org/files/webform/aiche_profile_-_version_2.jpg" alt="" class=" img-circle sample-profile" height="48px" width="48px" />Sasha Martinez</td>
-                                    <td class="mdl-data-table__cell--non-numeric"><a class="unpaid">Unpaid</a></td>
-                                    <td class="quantity">$74.00</td>
-                                    <td>10/14/16</td>
-                                    <tr>
-                                        <td class="mdl-data-table__cell--non-numeric View-More-Text"></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td><button class="mdl-button mdl-js-button mdl-button--primary secondary-button">
-                                    View More
-                                </button></td>
-                                    </tr>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
-                </main>
+                    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp payments-table">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                <th class="mdl-data-table__cell--non-numeric p-header">Payment Status</th>
+                                <th class="mdl-data-table__cell--non-numeric q-header">Quantity</th>
+                                <th class="mdl-data-table__cell--non-numeric final-row">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"> <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=faces" alt="" class=" img-circle sample-profile" height="48px" width="48px" />Juan Colon</td>
+                                <td class="mdl-data-table__cell--non-numeric"><a class="paid">Paid</a></td>
+                                <td class="quantity">$64.09</td>
+                                <td>05/14/16</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"> <img src="https://i.vimeocdn.com/portrait/8871703_300x300" alt="" class=" img-circle sample-profile" height="48px" width="48px" />Paul Rivera</td>
+                                <td class="mdl-data-table__cell--non-numeric"><a class="paid">Paid</a></td>
+                                <td class="quantity">$73.80</td>
+                                <td>07/14/16</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"> <img src="https://lh3.googleusercontent.com/-aQgPcf5qADM/AAAAAAAAAAI/AAAAAAAAAAA/gyCKEZb6dFw/photo.jpg" alt="" class=" img-circle sample-profile" height="48px" width="48px" />Patricia Santiago</td>
+                                <td class="mdl-data-table__cell--non-numeric"><a class="unpaid">Unpaid</a></td>
+                                <td class="quantity">$58.90</td>
+                                <td>09/10/16</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric"> <img src="https://www.gatescambridge.org/sites/www.gatescambridge.org/files/webform/aiche_profile_-_version_2.jpg" alt="" class=" img-circle sample-profile" height="48px" width="48px" />Sasha Martinez</td>
+                                <td class="mdl-data-table__cell--non-numeric"><a class="unpaid">Unpaid</a></td>
+                                <td class="quantity">$74.00</td>
+                                <td>10/14/16</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric View-More-Text"></td>
+                                <td></td>
+                                <td></td>
+                                <td><button class="mdl-button mdl-js-button mdl-button--primary secondary-button">
+                                View More
+                            </button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+        </main>
+    </div>
             <button class="mdl-button mdl-js-button mdl-button--colored mdl-button--fab view-source" id="show-dialog">
                 <i class="material-icons">add</i>
             </button>
@@ -225,16 +220,29 @@ even in small screens. -->
             </dialog>
             <script>
                 var dialog = document.querySelector('dialog');
-                var showDialogButton = document.querySelector('.show-dialog');
-                if (!dialog.showModal) {
-                    dialogPolyfill.registerDialog(dialog);
+                var showDialogButton = document.querySelector('#show-dialog');
+                if (dialog) {
+                    if (!dialog.showModal && typeof dialogPolyfill !== 'undefined') {
+                        dialogPolyfill.registerDialog(dialog);
+                    }
+                    if (showDialogButton) {
+                        showDialogButton.addEventListener('click', function() {
+                            dialog.showModal();
+                        });
+                    }
+                    document.querySelectorAll('[data-open-help]').forEach(function(link) {
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            dialog.showModal();
+                        });
+                    });
+                    var closeButton = dialog.querySelector('.close');
+                    if (closeButton) {
+                        closeButton.addEventListener('click', function() {
+                            dialog.close();
+                        });
+                    }
                 }
-                showDialogButton.addEventListener('click', function() {
-                    dialog.showModal();
-                });
-                dialog.querySelector('.close').addEventListener('click', function() {
-                    dialog.close();
-                });
             </script>
             <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 </body>

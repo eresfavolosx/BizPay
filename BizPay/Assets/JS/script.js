@@ -22,4 +22,3 @@ $(".hover").mouseleave(
   }
 );
 
-$('.parallax-window').parallax({imageSrc: 'image/whatwedo.jpg'});

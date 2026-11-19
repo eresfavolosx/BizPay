@@ -97,10 +97,10 @@ even in small screens. -->
         dliber@corporate.edu
         </span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link is-active" href="../index.html"><i class="material-icons nav-icon" role="presentation">home</i>Home</a>
+                <a class="mdl-navigation__link" href="../index.html"><i class="material-icons nav-icon" role="presentation">home</i>Home</a>
                 <a class="mdl-navigation__link" href="Payments.html"><i class="material-icons nav-icon" role="presentation">payment</i>Payments</a>
-                <a class="mdl-navigation__link" href="Payroll.html"><i class="material-icons nav-icon" role="presentation">people</i>Pay-Roll</a>
-                <a class="mdl-navigation__link" href="Pages/History.html"><i class="material-icons nav-icon" role="presentation">help</i>Help</a>
+                <a class="mdl-navigation__link is-active" href="Payroll.html"><i class="material-icons nav-icon" role="presentation">people</i>Pay-Roll</a>
+                <a class="mdl-navigation__link" href="#help" data-open-help="true"><i class="material-icons nav-icon" role="presentation">help</i>Help</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
@@ -110,7 +110,8 @@ even in small screens. -->
                         <div class="col-md-12 Home-title">
                             Full-Time Employees
                         </div>
-                    </div <div class="row">
+                    </div>
+                    <div class="row">
                     <div class="col-md-12 payroll-table">
                         <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp payments-table">
                             <thead>
@@ -120,8 +121,6 @@ even in small screens. -->
                                     <th class="mdl-data-table__cell--non-numeric">Quantity</th>
                                     <th class="mdl-data-table__cell--non-numeric timespan q-header">Timespan</th>
                                     <th class="mdl-data-table__cell--non-numeric final-row">Date</th>
-
-                                </tr>
                                 </tr>
                             </thead>
                             <tbody>
@@ -298,16 +297,29 @@ even in small screens. -->
     </dialog>
     <script>
         var dialog = document.querySelector('dialog');
-        var showDialogButton = document.querySelector('.show-dialog');
-        if (!dialog.showModal) {
-            dialogPolyfill.registerDialog(dialog);
+        var showDialogButton = document.querySelector('#show-dialog');
+        if (dialog) {
+            if (!dialog.showModal && typeof dialogPolyfill !== 'undefined') {
+                dialogPolyfill.registerDialog(dialog);
+            }
+            if (showDialogButton) {
+                showDialogButton.addEventListener('click', function() {
+                    dialog.showModal();
+                });
+            }
+            document.querySelectorAll('[data-open-help]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dialog.showModal();
+                });
+            });
+            var closeButton = dialog.querySelector('.close');
+            if (closeButton) {
+                closeButton.addEventListener('click', function() {
+                    dialog.close();
+                });
+            }
         }
-        showDialogButton.addEventListener('click', function() {
-            dialog.showModal();
-        });
-        dialog.querySelector('.close').addEventListener('click', function() {
-            dialog.close();
-        });
     </script>
     <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 </body>
